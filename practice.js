@@ -12,15 +12,15 @@
 
 
 // // Write a method that accepts an array of strings and prints out every other string.
-// function printEveryOtherItem(strings) {
-//   var index = 0;
-//   strings.forEach(function (string) {
-//     if (index % 2 === 0) {
-//       console.log(string);
-//     }
-//     index += 1;
-//   });
-// }
+function printEveryOtherItem(strings) {
+  var index = 0;
+  strings.forEach(function (string) {
+    if (index % 2 === 0) {
+      console.log(string);
+    }
+    index += 1;
+  });
+}
 // printEveryOtherItem(["a", "b", "c", "d", "e"]);
 
 
@@ -37,10 +37,10 @@
 // // Start with the hash: city_populations = {chi: 2700000}
 // // Add populations to the city_populations hash for New York City (8.4 million) and San Francisco (800,000).
 // // The result should be: {chi: 2700000, nyc: 8400000, sf: 800000}
-var cityPopulations = { chi: 2700000 };
-cityPopulations["nyc"] = 8400000;
-cityPopulations.sf = 800000;  // same as cityPopulations["sf"]
-console.log(cityPopulations);
+// var cityPopulations = { chi: 2700000 };
+// cityPopulations["nyc"] = 8400000;
+// cityPopulations.sf = 800000;  // same as cityPopulations["sf"]
+// console.log(cityPopulations);
 
 
 
@@ -99,14 +99,70 @@ console.log(cityPopulations);
 // Start with the hash: item_amounts = {chair: 5, table: 2}
 // You received 7 desks to sell. Change the hash to include desks.
 // The final result should be: {chair: 5, table: 2, desk: 7}
-var itemAmounts = { chair: 5, table: 2 }
-itemAmounts["desk"] = 7;
-console.log(itemAmounts)
+// var itemAmounts = { chair: 5, table: 2 }
+// itemAmounts["desk"] = 7;
+// console.log(itemAmounts)
 
-// Write a method that accepts a number and returns its factorial.
-// For example, the factorial of 5 is 5 * 4 * 3 * 2 * 1 = 120.
-
+// // Write a method that accepts a number and returns its factorial.
+// // For example, the factorial of 5 is 5 * 4 * 3 * 2 * 1 = 120.
+// var factorial = 5;
+// var index = factorial;
+// while (index > 1) {
+//   (index -= 1) {
+//     (factorial = factorial * index)
+//   }
 
 // Write a method that accepts two arrays of numbers, and prints the sum of every combination of numbers from first and second array. 
 // For example, if the method receives [1, 5, 10] and [100, 500, 1000], the method should print a list: 101, 501, 1001, 105, 505, 1005, 110, 510, 1010].
+
+// Write a function that accepts an array of strings and returns a new array containing every other string from the original array.For example, if the input is["a", "b", "c", "d", "e", "f"], the output should be["a", "c", "e"].
+// function selectEvenItems(strings) {
+//   var result = [];
+//   var index = 0;
+
+//   strings.forEach(function (string) {
+//     if (index % 2 === 0) {
+//       result.push(string);
+//     }
+//     index++;
+//   });
+//   return result;
+// }
+// console.log(selectEvenItems(["a", "b", "c", "d", "e", "f"]));
+
+// function factorial(number) {
+//   var result = 1;
+//   var currentNumber = number;
+//   for (var i = 0; i < number; i++) {
+//     result = result * currentNumber;
+//     currentNumber = currentNumber - 1;
+//   }
+//   return result;
+// }
+// console.log(factorial(5));
+
+function sum(numbers) {
+  var currentSum = 0;
+  var i = 0;
+  while (i < numbers.length) {
+    currentSum = currentSum + numbers[i];
+    i++;
+  }
+  return currentSum;
+}
+
+console.log(sum([4, 9, 3, 2]));
+
+
+function minimum_string(strings) {
+  var currentMinimum = strings[0];
+  strings.forEach(function (string) {
+    if (string.length < currentMinimum.length) {
+      currentMinimum = string;
+    }
+  })
+  return currentMinimum
+}
+console.log(minimum_string(["hello", "goodbye", "hi", "sup"]));
+
 
