@@ -141,28 +141,58 @@ function printEveryOtherItem(strings) {
 // }
 // console.log(factorial(5));
 
-function sum(numbers) {
-  var currentSum = 0;
+// function sum(numbers) {
+//   var currentSum = 0;
+//   var i = 0;
+//   while (i < numbers.length) {
+//     currentSum = currentSum + numbers[i];
+//     i++;
+//   }
+//   return currentSum;
+// }
+
+// console.log(sum([4, 9, 3, 2]));
+
+
+// function minimum_string(strings) {
+//   var currentMinimum = strings[0];
+//   strings.forEach(function (string) {
+//     if (string.length < currentMinimum.length) {
+//       currentMinimum = string;
+//     }
+//   })
+//   return currentMinimum
+// }
+// console.log(minimum_string(["hello", "goodbye", "hi", "sup"]));
+
+// function aWords(strings) {
+//   var aWordCount = 0;
+//   strings.forEach(function (string) {
+//     if (string[0] === "a") {
+//       aWordCount++;
+//     }
+//   })
+//   return aWordCount;
+// }
+// console.log(aWords(["apple", "igloo", "antartica", "evil", "alon musk"]));
+
+// function commaJoiner(strings) {
+//   var commaString = " ";
+//   strings.forEach(function (string) {
+//     commaString += string + ",";
+//   })
+//   return commaString;
+// }
+
+// console.log(commaJoiner(["what", "is", "up", "bro"]));
+
+function product(numbers) {
+  var product = 1;
   var i = 0;
   while (i < numbers.length) {
-    currentSum = currentSum + numbers[i];
-    i++;
+    product *= numbers[i];
+    i += 1;
   }
-  return currentSum;
+  return product;
 }
-
-console.log(sum([4, 9, 3, 2]));
-
-
-function minimum_string(strings) {
-  var currentMinimum = strings[0];
-  strings.forEach(function (string) {
-    if (string.length < currentMinimum.length) {
-      currentMinimum = string;
-    }
-  })
-  return currentMinimum
-}
-console.log(minimum_string(["hello", "goodbye", "hi", "sup"]));
-
-
+console.log(product([4, 5, 2, 9, 3])); 
